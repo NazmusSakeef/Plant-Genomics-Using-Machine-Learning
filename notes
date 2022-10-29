@@ -1,0 +1,24 @@
+Command I used to run experiment:
+
+    python .\main.py UCRArchive_2018 phot1_2_phyC resnet _itr_0
+
+Requirements (I recommend installing in a virtual environment):
+
+sklearn
+matplotlib
+keras
+h5py
+pandas
+numpy
+scipy
+tensorflow-gpu
+# keras_contrib # installed using pip3 install git+https://www.github.com/keras-team/keras-contrib.git
+
+To run your own experiments, add new datasets like I did with the phot1_2_phyC dataset
+
+Required changes:
+
+- create folder archives/UCRArchive_2018/DATASET_NAME
+- add DATASET_NAME_TRAIN.tsv and DATASET_NAME_TEST.tsv to the folder you created
+- update utils/constants.py with your new dataset (control-f for "phot1_2_phyC" to see everything you should change in this file)
+- run using "python .\main.py UCRArchive_2018 DATASET_NAME CLASSIFIER_NAME _itr_0"
